@@ -4,59 +4,78 @@ import java.util.Scanner;
 
 public class Contatomain {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
+        Contato agenda = new Contato();
 
-		        Scanner sc = new Scanner(System.in);
-		        Contato agenda = new Contato();
+        int opcao;
 
-		        int opcao;
+        do {
 
-		        do {
+            System.out.println("\n=== AGENDA DE CONTATOS ===");
+            System.out.println("1 - Adicionar contato");
+            System.out.println("2 - Listar contatos");
+            System.out.println("3 - Buscar contato");
+            System.out.println("4 - Remover contato");
+            System.out.println("0 - Sair");
+            System.out.print("Escolha: ");
 
-		            System.out.println("\n=== AGENDA DE CONTATOS ===");
-		            System.out.println("1 - Adicionar contato");
-		            System.out.println("2 - Listar contatos");
-		            System.out.println("0 - Sair");
-		            System.out.print("Escolha: ");
+            opcao = sc.nextInt();
+            sc.nextLine();
 
-		            opcao = sc.nextInt();
-		            sc.nextLine();
+            switch (opcao) {
 
-		            switch (opcao) {
+                case 1:
 
-		                case 1:
+                    System.out.print("Digite o nome: ");
+                    String nome = sc.nextLine();
 
-		                    System.out.print("Nome: ");
-		                    String nome = sc.nextLine();
+                    System.out.print("Digite o telefone: ");
+                    String telefone = sc.nextLine();
 
-		                    System.out.print("Telefone: ");
-		                    String telefone = sc.nextLine();
+                    agenda.adicionar(nome, telefone);
 
-		                    agenda.adicionar(nome, telefone);
+                    break;
 
-		                    break;
+                case 2:
 
-		                case 2:
+                    agenda.listar();
 
-		                    agenda.listar();
+                    break;
 
-		                    break;
+                case 3:
 
-		                case 0:
+                    System.out.print("Digite o nome para buscar: ");
+                    String busca = sc.nextLine();
 
-		                    System.out.println("Saindo da agenda...");
+                    agenda.buscarNome(busca);
 
-		                    break;
+                    break;
 
-		                default:
+                case 4:
 
-		                    System.out.println("Opção inválida!");
+                    System.out.print("Digite o nome para remover: ");
+                    String remover = sc.nextLine();
 
-		            }
+                    agenda.remover(remover);
 
-		        } while (opcao != 0);
+                    break;
 
-		        sc.close();
-		    }
-		}
+                case 0:
+
+                    System.out.println("Saindo...");
+
+                    break;
+
+                default:
+
+                    System.out.println("Opção inválida!");
+
+            }
+
+        } while (opcao != 0);
+
+        sc.close();
+    }
+}
