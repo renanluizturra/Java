@@ -22,8 +22,7 @@ public class Produtomain {
 
             opcao = sc.nextInt();
             sc.nextLine();
-            //testando no git
-
+            System.out.println("Teste; ");
             switch (opcao) {
 
                 case 1:
