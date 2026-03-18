@@ -21,7 +21,7 @@ public class Aluno {
     
     public String obterSituacao(){
         if(calcularMedia() >= 7){
-            return "aprovado";
+            return "aprovado"; 
         } else {
             return "reprovado";
         }
