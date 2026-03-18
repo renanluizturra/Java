@@ -18,7 +18,7 @@ public class Aluno {
     public double calcularMedia(){
         return (nota1 + nota2) / 2;
     }
-    // eduardogay
+    
     public String obterSituacao(){
         if(calcularMedia() >= 7){
             return "aprovado";
