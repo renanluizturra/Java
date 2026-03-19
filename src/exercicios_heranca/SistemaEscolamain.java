@@ -70,8 +70,8 @@ public class SistemaEscolamain {
              if (lista.isEmpty()) {
                  System.out.println("Lista vazia!");
              } else {
-                 for (Pessoa p : lista) {
-                     p.exibirDados();
+                 for (Pessoa professor : lista) {
+                     professor.exibirDados();
                  }
              }
              break;
