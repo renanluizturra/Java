@@ -2,9 +2,6 @@ package exercicios_heranca;
 
 import java.util.Scanner;
 
-import heranca.Carro;
-import heranca.Moto;
-
 public class Teste_Produtosmain {
 
 	public static void main(String[] args) {
