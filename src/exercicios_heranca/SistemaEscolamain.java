@@ -13,7 +13,7 @@ public class SistemaEscolamain {
 	    int opcao;
 
 	    do {
-	      System.out.println("\n=== MENU ===");
+	      System.out.println("=== MENU ===");
 	      System.out.println("1 - Cadastrar Aluno");
 	      System.out.println("2 - Cadastrar Professor");
 	      System.out.println("3 - Listar Todos");
@@ -46,10 +46,10 @@ public class SistemaEscolamain {
 	      break;
 
 	     case 2:
-	    	 System.out.print("Nome: ");
+	    	 System.out.print("Nome do Professor: ");
              String nomeProfessor = sc.nextLine();
 
-             System.out.print("CPF: ");
+             System.out.print("CPF Professor: ");
              String cpfProfessor = sc.nextLine();
 
              System.out.print("Idade: ");
