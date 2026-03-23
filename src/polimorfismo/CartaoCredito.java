@@ -1,5 +1,45 @@
 package polimorfismo;
 
-public class CartaoCredito {
+public class CartaoCredito extends Pagamento{
+	//subclasses 1
+	private String numeroCartao;
 
+	public CartaoCredito(String titular, double valor, String numeroCartao) {
+		super(titular, valor);
+		this.numeroCartao = numeroCartao;
+	}
+
+	public String getNumeroCartao() {
+		return numeroCartao;
+	}
+
+	public void setNumeroCartao(String numeroCartao) {
+		this.numeroCartao = numeroCartao;
+	}
+	
+	//Polimorfismo: Sobreescrita do Método processarPagamento
+	@Override
+	public void processarPagamento() {
+		System.out.println("PROCESSANDO CARTÃO DE CRÉDITO");
+		System.out.println("Titular: " + getTitular()); //get pq esta private
+		System.out.println("Valor: "+String.format("%.2f", getValor()));
+		System.out.println("Cartão: **** **** ****"+
+				numeroCartao.substring(numeroCartao.length()-4));
+		System.out.println("Taxa: R$"+ String.format("%.2f",calcularTaxa()));
+		System.out.println("Total: R$"+ String.format("%.2f",getValor()+calcularTaxa()));
+		System.out.println("Pagamento com cartão Aprovado!!");
+		
+	
+		
+	}
+	@Override	
+	public double calcularTaxa() {
+		return getValor()* 0.03;//3% taxa para cartão
+		
+	
+	
+	
+	}
 }
+
+
