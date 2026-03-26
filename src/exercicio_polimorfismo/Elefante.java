@@ -1,4 +1,4 @@
-package polimorfismo;
+package exercicio_polimorfismo;
 
 public class Elefante extends Animal {
     private double comprimentoElefante;

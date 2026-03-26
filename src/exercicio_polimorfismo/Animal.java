@@ -1,4 +1,4 @@
-package polimorfismo;
+package exercicio_polimorfismo;
 
 public class Animal {
 	
