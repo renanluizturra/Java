@@ -9,7 +9,7 @@ public class PessoaMain {
 	
 	Aluno.apresentar();
 	Aluno.saudacao();
-	Professor.apresentar();
+	Professor.apresentar( );
 	Professor.saudacao();
 	
 }
